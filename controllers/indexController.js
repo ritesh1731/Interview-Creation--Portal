@@ -1,7 +1,7 @@
 const Item = require('../models/listitem');
 const Participant = require('../models/participant');
 const moment = require('moment');
-const mailer = require('../mailer/schedule');
+// const mailer = require('../mailer/schedule');
 
 module.exports.homeController = async function (req, res) {
   try {
@@ -91,7 +91,7 @@ module.exports.createList = async function (req, res) {
               start: interview.startTime,
               end: interview.endTime
             }
-            mailer.newInterview(temp)
+          //  mailer.newInterview(temp)
           }
           req.flash('success', 'Interview Scheduled Successfully')
           return res.redirect('back');
